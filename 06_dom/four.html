@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to edit and remove elements in DOM</title>
+</head>
+<body>
+    <ol>
+        <li>Javascript</li>
+    </ol>
+    
+</body>
+
+<script>
+    function addLanguage(langName){
+        const ol = document.querySelector('ol');
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        ol.appendChild(li);
+    }
+
+    function addOtimalLanguage(langName){
+        // console.log(li);
+        
+        const li = document.createElement('li');
+        const textNode = document.createTextNode(langName);
+        li.appendChild(textNode);
+        // li.appendChild(document.createTextNode(` ${langName}`));
+        document.querySelector('ol').appendChild(li);
+
+    }
+    addLanguage("Python");
+    addOtimalLanguage("Rust");
+
+    // Editing an element
+    const secondLang = document.querySelector("li:nth-child(2)");
+    secondLang.innerHTML = "Java Script";
+
+
+    //remove an element
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+</script>
+</html>
