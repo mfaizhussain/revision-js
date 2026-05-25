@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM edit and remove</title>
+</head>
+<body style=" background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    <script>
+        
+        const ol = document.querySelector('ul');
+        function addLanguage(language)
+        {
+           const newLi = document.createElement('li');
+           newLi.textContent = `${language}`;
+           ol.appendChild(newLi);
+        }
+
+        addLanguage("python");
+        addLanguage("rust");
+        addLanguage("Java");
+    </script>
+</body>
+</html>
