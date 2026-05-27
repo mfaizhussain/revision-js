@@ -16,36 +16,32 @@
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
     </ul>
     <script>
-       const images = document.getElementById("images")
-       const japan = document.getElementById("japan")
-    //    images.addEventListener("click", (e)=>
-    // {
-    //     console.log(`Image is clicked `);
-        
-    // }, false)
+    //   document.getElementById("japan").onclick = function() {
+    //     alert("japan")
+    //   }
 
-    // japan.addEventListener("click", (e)=> {
-    //     console.log(`Japan is clicked `);
-        
-        
-    // }, false)
+    // document.getElementById("images").addEventListener('click', function(e){
+    // console.log("li is clicked");
+    
+    // },)
 
-    images.addEventListener('click', (e) =>{
-        // console.log(e.target.parentNode);
-        console.log(e.target.tagName);
-        
-        if(e.target.tagName === "IMG")
+
+    // document.querySelector("#owl").addEventListener("click", function(e){
+    //     console.log("owl is clicked");
+    //     e.stopPropagation()
+    // },)
+
+
+    document.getElementById("images").addEventListener("click",
+        function(e){
+            console.log(e.target.tagName);
+            if(e.target.tagName === "IMG")
         {
-            // console.log(removeIt);
-            console.log(e.target.id);
+            e.target.parentNode.remove()
+        }
             
-            const removeIt = e.target.parentNode
-        removeIt.remove()
-
-    }
-
-        
-    })
+        }
+    )
     </script>
 </body>
 </html>

@@ -10,6 +10,14 @@
         const requestUrl = "https://api.github.com/users/mfaizhussain"
         const xhr = new XMLHttpRequest();
         xhr.open("GET", requestUrl)
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            console.log(this.responseText);
+            const data = JSON.parse(this.responseText)
+            console.log(data.login);
+            
+            
+        }
         xhr.send()
     </script>
 </body>
